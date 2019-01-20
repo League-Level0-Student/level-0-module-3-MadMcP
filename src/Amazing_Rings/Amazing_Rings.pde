@@ -1,24 +1,24 @@
+int ring1 = 0;
+int ring2 = 500;
 void setup(){
  size(500, 500); 
-   
 }
 
 void draw(){
-  int r = 25;
-  for(int m = 250; m < 500; m++){
+    int r = 25;
+    background(255);
   for(int i = 0; i < 10; i++){
     noFill();
-   ellipse(m, 250, r, r);
+   ellipse(ring1, 250, r, r);
    r = r + 25;
   }
   r = 25;
-  }
-  for(int m = 250; m > 0; m--){
   for(int i = 0; i < 10; i++){
     noFill();
-   ellipse(m, 250, r, r);
+   ellipse(ring2, 250, r, r);
    r = r + 25;
   }
   r = 25;
-  }
+ring1 = ring1 + 1;
+ring2 = ring2 - 1;
 }
